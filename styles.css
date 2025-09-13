@@ -1,0 +1,194 @@
+body {
+    background-image: url('Imagenes/Biblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+@keyframes slide {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.carousel-slide.active {
+    animation: slide 0.5s ease-in-out;
+}
+
+.logo-container {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    max-height: 150px;
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    min-height: 80vh;
+}
+
+.navbar {
+    background-color: rgb(169, 218, 119);
+    border: 2px solid white;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Estilos para el cuadro comparativo */
+.character-comparison {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.character-card {
+    text-align: center;
+    position: relative;
+}
+
+.character-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.character-info {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    z-index: 1;
+    font-size: 14px;
+    text-align: left;
+}
+
+.character-card:hover .character-info {
+    display: block;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: rgb(169, 218, 119);
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    border: 2px solid white;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+}
