@@ -1,0 +1,6 @@
+FROM php8.2-apache
+COPY . varwwwhtml
+RUN docker-php-ext-install pdo_mysql mysqli
+RUN chown -R www-datawww-data varwwwhtml
+RUN a2enmod rewrite
+EXPOSE 80
